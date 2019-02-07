@@ -1,0 +1,33 @@
+/*---------- COLORS -----------*/
+
+// Branding colors
+
+$color-brand: rgb(17, 151, 125);
+$color-secondary: rgba(203, 197, 110, 1);
+
+
+// Grey
+
+$color-black: rgb(12, 12, 12);
+$color-darkgrey: rgba(100, 100, 100, 1);
+$color-lightgrey1: rgba(230, 230, 230, 1);
+$color-lightgrey2: rgba(233, 233, 233, 1);
+$color-white: rgb(255,255,255,1);
+
+// Opacity
+
+$color-overlay-black: rgba(0, 0, 0, 0.7);
+$color-overlay-grey: rgba(0, 0, 0, 0.3);
+$color-overlay-white: rgba(255, 255, 255, 0.9);
+
+/*---------- Typography -----------*/
+
+// Base
+$font-heading: 'VAGRounded_BT', sans-serif;
+$font-text: 'VAGRounded_LT', sans-serif;
+$basefontsize: 16px;
+
+/*---------- Buttons -----------*/
+
+$buttoncolor: $color-white;
+$buttonbackgroundcolor: $color-brand;

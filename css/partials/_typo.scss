@@ -1,0 +1,49 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 80px;
+  text-align: center;
+  text-shadow: 0 0 5px #3a3a3a;
+  @include breakpoint (md){
+    font-size: 1.5em;
+    padding: 1.5em; 
+    top: 0;
+  }
+}
+h2 {
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  color:$color-black;
+  margin: .5em;
+  position: relative;
+  &::after{
+    content: "";
+    width: 150px;
+    height: 2px;
+    background: $color-brand;
+    top: 110%;
+    left: calc(50% - 75px);
+    position: absolute;
+  }
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color:$color-darkgrey;
+  margin: .5em;
+  &.big {
+    color:$color-black;
+    font-weight: 700;
+    font-size: 1.1em;
+  }
+}
+a {
+  color:$color-brand;
+  font-weight: 600;
+}

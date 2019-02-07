@@ -1,0 +1,44 @@
+/*---------- MIXINS -----------*/
+
+// Prefix mixin
+
+@mixin css-prefix ($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+// Font face mixin
+
+@mixin font-face($name, $file) {
+  @font-face {
+  font-family: "#{$name}";
+  src: url("../assets/fonts/#{$file}.eot");
+  src: url("../assets/fonts/#{$file}.eot?#iefix") format("embedded-opentype"),
+  url("../assets/fonts/#{$file}.woff") format("woff"),
+  url("../assets/fonts/#{$file}.ttf") format("truetype"),
+  url("../assets/fonts/#{$file}.svg?#webfont") format("svg");
+}
+}
+
+// Media query
+
+@mixin breakpoint($point) {
+  @if $point == md {
+     @media only screen and (min-width: 768px) {
+        @content;
+     }
+  } 
+  @else if $point == lg {
+     @media only screen and (min-width: 1024px) {
+        @content;
+     }
+  } 
+  @else if $point == sm {
+   @media only screen and (min-width: 480px) {
+      @content;
+   }
+} 
+}

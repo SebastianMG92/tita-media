@@ -1,0 +1,636 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: https://meyerweb.com
+	HTML5 Doctor				:: https://html5doctor.com
+	and the HTML5 Boilerplate	:: https://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */
+}
+
+input[type=radio] {
+  vertical-align: text-bottom;
+}
+
+input[type=checkbox] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type=checkbox] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select, input, textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td, td img {
+  vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights https://gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+  width: auto;
+  overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*---------- COLORS -----------*/
+/*---------- Typography -----------*/
+/*---------- Buttons -----------*/
+/*---------- MIXINS -----------*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  top: 80px;
+  text-align: center;
+  text-shadow: 0 0 5px #3a3a3a;
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.5em;
+    padding: 1.5em;
+    top: 0;
+  }
+}
+
+h2 {
+  font-size: 1.3em;
+  font-family: "Roboto", sans-serif;
+  color: #0c0c0c;
+  margin: 0.5em;
+  position: relative;
+}
+h2::after {
+  content: "";
+  width: 150px;
+  height: 2px;
+  background: #11977d;
+  top: 110%;
+  left: calc(50% - 75px);
+  position: absolute;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #646464;
+  margin: 0.5em;
+}
+p.big {
+  color: #0c0c0c;
+  font-weight: 700;
+  font-size: 1.1em;
+}
+
+a {
+  color: #11977d;
+  font-weight: 600;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+.container-fluid {
+  max-width: 100%;
+}
+.container-fluid .row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.container .row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+header {
+  position: relative;
+  width: 100%;
+  background: white;
+  z-index: 90;
+}
+header .logo {
+  grid-area: 1/span 6;
+  justify-self: start;
+  align-self: center;
+}
+header .nav-icon {
+  display: block;
+  grid-area: 1/span 6;
+  justify-self: end;
+  align-self: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 80;
+}
+@media only screen and (min-width: 768px) {
+  header .nav-icon {
+    grid-area: 1/span 5;
+    display: none;
+  }
+}
+header .nav-icon .line-menu {
+  width: 30px;
+  height: 3px;
+  background-color: #11977d;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+header .nav-icon.close .line-menu:nth-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-5px, 5px);
+  -moz-transform: rotate(-45deg) translate(-5px, 5px);
+  -ms-transform: rotate(-45deg) translate(-5px, 5px);
+  -o-transform: rotate(-45deg) translate(-5px, 5px);
+  transform: rotate(-45deg) translate(-5px, 5px);
+}
+header .nav-icon.close .line-menu:nth-child(2) {
+  opacity: 0;
+}
+header .nav-icon.close .line-menu:nth-child(3) {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  -moz-transform: rotate(45deg) translate(-8px, -8px);
+  -ms-transform: rotate(45deg) translate(-8px, -8px);
+  -o-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+header .nav-menu {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -100%;
+  right: 0%;
+  background: rgba(255, 255, 255, 0.9);
+  height: 100vh;
+  width: 100%;
+  -webkit-transition: 0.5s ease-in;
+  -moz-transition: 0.5s ease-in;
+  -ms-transition: 0.5s ease-in;
+  -o-transition: 0.5s ease-in;
+  transition: 0.5s ease-in;
+}
+@media only screen and (min-width: 768px) {
+  header .nav-menu {
+    position: relative;
+    display: block;
+    grid-area: 1/span 7;
+    align-self: center;
+    top: 0;
+    background: none;
+    height: unset;
+  }
+}
+header .nav-menu ul li {
+  display: block;
+  margin: 1em;
+  position: relative;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+@media only screen and (min-width: 768px) {
+  header .nav-menu ul li {
+    display: inline-block;
+    margin: 0;
+  }
+}
+header .nav-menu ul li a {
+  text-decoration: none;
+  color: #646464;
+  font-weight: initial;
+}
+header .nav-menu ul li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background: #11977d;
+  left: 50%;
+  right: 50%;
+  top: 100%;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+header .nav-menu ul li:hover::after {
+  left: 0%;
+  right: 0%;
+}
+header .nav-menu.show {
+  top: 0%;
+}
+
+main {
+  height: 500px;
+  background: black;
+  overflow: hidden;
+  position: relative;
+  /* Text heading */
+  /* Slideshow container */
+  /* Next & previous buttons */
+  /* Position the "next button" to the right */
+  /* On hover, add a black background color with a little bit see-through */
+  /* The dots/bullets/indicators */
+  /* Fading animation */
+  /* On smaller screens, decrease text size */
+}
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 50%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#a6000000", endColorstr="#00000000",GradientType=0 );
+}
+main .main-heading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+main .slideshow-container {
+  margin: auto;
+  height: 100%;
+}
+main .mySlides {
+  height: 100%;
+}
+main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .prev, main .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 20;
+}
+main .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+main .prev:hover, main .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+main .dots {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+main .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+main .active, main .dot:hover {
+  background-color: #717171;
+}
+main .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 300px) {
+  main .prev, main .next, main .text {
+    font-size: 11px;
+  }
+}
+
+.about .row {
+  grid-gap: 50px 0;
+}
+.about .about-text {
+  grid-area: 1/span 12;
+}
+@media only screen and (min-width: 768px) {
+  .about .about-text {
+    grid-area: 1/span 5;
+  }
+}
+.about .about-image {
+  grid-area: 2/span 12;
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+@media only screen and (min-width: 768px) {
+  .about .about-image {
+    grid-area: 1/span 7;
+    position: relative;
+    height: 100%;
+    overflow: unset;
+  }
+}
+.about img {
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 200%;
+  max-width: unset;
+}
+@media only screen and (min-width: 480px) {
+  .about img {
+    position: relative;
+    max-width: 100%;
+    left: unset;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .about img {
+    position: relative;
+    max-width: 100%;
+    left: unset;
+    width: 100%;
+    top: 0%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.pd-y-1 {
+  padding: 1em 0;
+}
+
+.pd-t-1 {
+  padding-top: 1em;
+}
+
+.pd-t-5 {
+  padding-top: 5em;
+}
+
+.pd-1 {
+  padding: 1em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */
